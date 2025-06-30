@@ -1,0 +1,20 @@
+= Zulu Metadata API Java Client
+
+Currently, this contains two hacked-together, scripts that dump the information needed for updating https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/compilers/zulu/24.nix
+
+== ZuluQuery Java
+
+Currently requires `jbang` to run and can be run with:
+
+[source]
+----
+./ZuluQuery.java
+----
+
+Which will print a usage string.
+
+== list-all-nixpkgs-images.sh
+
+A BASH script that calls ./ZuluQuery.java eight times to get the information
+needed to update the `24.nix` file. 
+
